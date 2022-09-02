@@ -1,0 +1,1 @@
+A interface File provê informações sobre arquivos e permite ao JavaScript  a acessar seu conteúdo. Esse adipisicing consectetur cillum irure fugiat quis. Et adipisicing amet dolor incididunt eu exercitation. Et do qui eiusmod et et pariatur mollit sit. Sint non amet et eu eiusmod enim. Commodo labore quis aliquip id ipsum enim. Aute ea cillum voluptate quis et.
