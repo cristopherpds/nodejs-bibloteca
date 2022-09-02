@@ -13,16 +13,16 @@ const extraiLinks=(texto)=>{
     arrayResultados.push({[temp[1]]: temp[2]})
   }
   
-  return arrayResultados;
+  return arrayResultados.length === 0 ? 'nao ha links' : arrayResultados;
 }
 const  pegaArquivo = async(caminhoDoArquivo) =>{
   try {
     const texto = await fs.promises.readFile(caminhoDoArquivo, 'utf-8')
-    console.log(extraiLinks(texto));
+    return extraiLinks(texto);
   } catch (erro) {
     trataErro(erro);
   }
 }
 
-pegaArquivo('./arquivos/texto1.md');
+module.exports = pegaArquivo;
 
