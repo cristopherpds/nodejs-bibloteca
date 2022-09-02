@@ -1,11 +1,17 @@
 const chalk = require('chalk');
+const fs = require('fs');
 
-console.log(chalk.blue('vamos começar!'));
-
-const paragrafo = 'Texto retornado por uma função';
-
-function texto(string) {
-  return string;
+const trataErro=(erro)=>{
+  throw new Error(chalk.red(erro.code, 'caminho do arquivo incorreto'));
 }
 
-console.log(texto(paragrafo));
+const  pegaArquivo = (caminhoDoArquivo) =>{
+  fs.readFile(caminhoDoArquivo, 'utf-8', (erro, texto)=>{
+    if(erro){
+      trataErro(erro);
+    }
+    console.log(chalk.green(texto));
+  })
+}
+
+pegaArquivo('./arquivos/texto1.md');
